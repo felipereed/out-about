@@ -7,3 +7,66 @@
   text-align: center;
   padding-top: 1.5em;
 }
+
+.sub-title {
+  font-family: var(--font-body);
+  font-size: 2em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.option { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 2.2em;
+  font-family: var(--font-options);
+  height: 2.5em;
+}
+
+.option-button {
+  margin: 15px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px black;
+  border: none;
+}
+
+.option > h3 {
+  margin: 0.7em;
+}
+
+button {
+  padding: 0 8px;
+}
+
+.breakfast {
+  background-color: var(--breakfast-background);
+}
+
+.landmark {
+  background-color: var(--landmark-background);
+}
+
+.lunch {
+  background-color: var(--lunch-background);
+}
+
+.museum {
+  background-color: var(--museum-background);
+}
+
+.park {
+  background-color: var(--park-background);
+}
+
+.dinner {
+  background-color: var(--dinner-background);
+}
+
+.rooftop {
+  background-color: var(--rooftop-background);
+}
+
