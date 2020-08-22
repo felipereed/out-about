@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Out & About</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:ital,wght@1,800&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <div>
@@ -23,6 +24,14 @@
         <option value="3">$$$</option>
         <option value="4">$$$$</option>
       </select> 
+    </div>
+    <div class="breakfast result-section">
+      <img class="recommendation-img" id="resultImgBreakfast" src="">
+      <p id="resultNameBreakfast"></p>
+      <p id="resultAddressBreakfast"></p>
+      <a id="resultWebsiteBreakfast" href="" target="_blank" alt="Website">Click here for more info.</a>
+      <p id="resultPhoneBreakfast"></p>
+      <button id="closeBreakfastRecommendation" class="close-recommendation btn btn-default btn-lg btn3d">X</button>
     </div>
     <div class="landmark option">
       <h3>Landmark</h3>
@@ -60,10 +69,29 @@
       <h3>Rooftop</h3>
       <button class="option-button">Surprise me</button>
     </div>
-    <div>
-      
+    <div class="contact">
+      <div class="email">
+        <img class="image" src="assets/images/email.png" alt="email">
+        <h2>Contact</h2>
+      </div>
+      <div class="github">
+        <img class="image" src="assets/images/github.png" alt="github">
+        <h2>Github</h2>
+      </div>
     </div>
-    <div></div>
+    <div class="contact">
+      <div class="linkedin">
+        <img class="image" src="assets/images/linkedin.png" alt="linkedin">
+        <h2>Linked In</h2>
+      </div>
+      <div class="medium">
+        <img class="image" src="assets/images/medium.png" alt="medium">
+        <h2>Medium</h2>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; by Felipe Reed, 2020.</p>
+    </div>
   </div>
 </body>
 </html>
