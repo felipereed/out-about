@@ -20,14 +20,41 @@ async function getInfoFromApi(searchTerm, price) {
 }
 
 function randomlySelectItem(myArray) {
-  return myArray[Math.floor(Math.random() * myArray.length)];
+  return myArray[Math.floor(Math.random() * myArray.length)]
 }
 
 function buttonEvents() {
   let breakfastDropdown = document.querySelector('.breakfast > select')
+  let landmarkButton = document.querySelector('.landmark > button')
+  let lunchDropdown = document.querySelector('.lunch > select')
+  let museumButton = document.querySelector('.museum > button')
+  let parkButton = document.querySelector('.park > button')
+  let dinnerDropdown = document.querySelector('.dinner > select')
+  let rooftopButton = document.querySelector('.rooftop > button')
+  
   let closeBreakfastRecommendation = document.getElementById('closeBreakfastRecommendation');
-  breakfastDropdown.addEventListener('change', selectBreakfast);
-  closeBreakfastRecommendation.addEventListener('click', hideResultSection);
+  let closeLandmarkRecommendation = document.getElementById('closeLandmarkRecommendation')
+  let closeLunchRecommendation = document.getElementById('closeLunchRecommendation')
+  let closeMuseumRecommendation = document.getElementById('closeMuseumRecommendation')
+  let closeParkRecommendation = document.getElementById('closeParkRecommendation')
+  let closeDinnerRecommendation = document.getElementById('closeDinnerRecommendation')
+  let closeRooftopRecommendation = document.getElementById('closeRooftopRecommenration')
+  
+  breakfastDropdown.addEventListener('change', selectBreakfast)
+  landmarkButton.addEventListener('click', landmarkButton)
+  lunchDropdown.addEventListener('change', selectLunch)
+  museumButton.addEventListener('click', buttonMuseum)
+  parkButton.addEventListener('click', parkButton)
+  dinnerDropdown.addEventListener('change', dinnerDropdown)
+  rooftopButton.addEventListener('click', rooftopButton)
+  
+  closeBreakfastRecommendation.addEventListener('click', hideResultSection)
+  closeLandmarkRecommendation.addEventListener('click', hideResultSection)
+  closeLunchRecommendation.addEventListener('click', hideResultSection)
+  closeMuseumRecommendation.addEventListener('click', hideResultSection)
+  closeParkRecommendation.addEventListener('click', hideResultSection)
+  closeDinnerRecommendation.addEventListener('click', hideResultSection)
+  closeRooftopRecommendation.addEventListener('click', hideResultSection)
 }
 
 async function makeRecommendation(searchTerm, priceRange) {
@@ -38,8 +65,26 @@ async function makeRecommendation(searchTerm, priceRange) {
 }
 
 async function selectBreakfast() {
-  let priceRange = this.options[this.selectedIndex].value;
+  let priceRange = this.options[this.selectedIndex].value
   makeRecommendation('Breakfast', priceRange);
+}
+
+async function buttonLandmark() {
+  makeRecommendation('Landmark')
+}
+
+async function selectLunch() {
+  let priceRange = this.options[this.selectIndex].value
+  makeRecommendation('Lunch', priceRange)
+}
+
+async function buttonMuseum() {
+  makeRecommendation('Museum');
+}
+
+async function selectDinner() {
+  let priceRange = this.options[this.selectIndex].value
+  makeRecommendation('Dinner', priceRange)
 }
 
 function hideResultSection() {
