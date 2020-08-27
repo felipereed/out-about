@@ -38,15 +38,15 @@ function buttonEvents() {
   let closeMuseumRecommendation = document.getElementById('closeMuseumRecommendation')
   let closeParkRecommendation = document.getElementById('closeParkRecommendation')
   let closeDinnerRecommendation = document.getElementById('closeDinnerRecommendation')
-  let closeRooftopRecommendation = document.getElementById('closeRooftopRecommenration')
+  let closeRooftopRecommendation = document.getElementById('closeRooftopRecommendation')
   
   breakfastDropdown.addEventListener('change', selectBreakfast)
-  landmarkButton.addEventListener('click', landmarkButton)
+  landmarkButton.addEventListener('click', buttonLandmark)
   lunchDropdown.addEventListener('change', selectLunch)
   museumButton.addEventListener('click', buttonMuseum)
-  parkButton.addEventListener('click', parkButton)
-  dinnerDropdown.addEventListener('change', dinnerDropdown)
-  rooftopButton.addEventListener('click', rooftopButton)
+  parkButton.addEventListener('click', buttonPark)
+  dinnerDropdown.addEventListener('change', selectDinner)
+  rooftopButton.addEventListener('click', buttonRooftop)
   
   closeBreakfastRecommendation.addEventListener('click', hideResultSection)
   closeLandmarkRecommendation.addEventListener('click', hideResultSection)
@@ -74,7 +74,7 @@ async function buttonLandmark() {
 }
 
 async function selectLunch() {
-  let priceRange = this.options[this.selectIndex].value
+  let priceRange = this.options[this.selectedIndex].value
   makeRecommendation('Lunch', priceRange)
 }
 
@@ -82,9 +82,17 @@ async function buttonMuseum() {
   makeRecommendation('Museum');
 }
 
+async function buttonPark() {
+  makeRecommendation('Park')
+}
+
 async function selectDinner() {
-  let priceRange = this.options[this.selectIndex].value
+  let priceRange = this.options[this.selectedIndex].value
   makeRecommendation('Dinner', priceRange)
+}
+
+async function buttonRooftop() {
+  makeRecommendation('Rooftop')
 }
 
 function hideResultSection() {
