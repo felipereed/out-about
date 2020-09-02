@@ -96,7 +96,6 @@ h2 {
   justify-content: space-around;
   border-bottom: 1px solid black;
   height: 4em;
-  
 }
 
 .email, .linkedin {
@@ -129,3 +128,12 @@ h2 {
   padding-top: 2em;
 }
 
+.yelp {
+  background-color: #CA1C0C;
+  color: white;
+  text-align: center;
+}
+
+.yelp-logo {
+  max-height: 50px;
+}
