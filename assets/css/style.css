@@ -5,7 +5,7 @@
   font-family: var(--font-title);
   font-size: 2.5em;
   text-align: center;
-  padding-top: 1.5em;
+  padding-top: 1.7em;
 }
 
 .sub-title {
@@ -90,6 +90,7 @@ h2 {
   font-size: 1.6em;
 }
 
+
 .contact {
   display: flex;
   flex-direction: row;
@@ -106,6 +107,25 @@ h2 {
   width: 50%;
   align-items: center;
   text-align: left;
+}
+
+#resultNameBreakfast, #resultNameLandmark, #resultNameLunch, #resultNameMuseum, #resultNamePark, #resultNameDinner, #resultNameRooftop {
+  font-family: var(--font-body);
+  font-size: 2em;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  margin: 15px auto
+}
+
+.result-info {
+  font-family: var(--font-body);
+  color: white;
+  margin: auto auto auto 25%;
+}
+
+#resultWebsiteBreakfast {
+  text-decoration: underline;
 }
 
 .github, .medium {
@@ -129,11 +149,15 @@ h2 {
 }
 
 .yelp {
-  background-color: #CA1C0C;
-  color: white;
+  color: #CA1C0C;
   text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.4em;
+  padding: 1em 0;
+  vertical-align: middle;
 }
 
 .yelp-logo {
   max-height: 50px;
+  vertical-align: middle;
 }
