@@ -124,7 +124,7 @@ h2 {
   margin: auto auto auto 25%;
 }
 
-#resultWebsiteBreakfast, #resultWebsiteLandmark, #resultWebsiteLunch, #resultWebsiteMuseum, #resultWebsitePark, #resultWebsiteDinner, #resultWebsiteRooftop {
+.resultWebsite {
   text-decoration: underline;
 }
 
@@ -159,6 +159,7 @@ h2 {
 
 .yelp-logo {
   max-height: 50px;
+  margin-bottom: 8px;
   vertical-align: middle;
 }
 
