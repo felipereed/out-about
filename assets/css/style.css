@@ -161,3 +161,8 @@ h2 {
   max-height: 50px;
   vertical-align: middle;
 }
+
+.map-image {
+  height: 60px;
+  margin: auto -5px;
+}

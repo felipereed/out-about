@@ -108,12 +108,14 @@ function populateResultSection(item, category) {
   let address = document.getElementById('resultAddress' + category);
   let phone = document.getElementById('resultPhone' + category);
   let website = document.getElementById('resultWebsite' + category);
+  let map = document.getElementById('resultMap' + category)
 // the section below sets all the properties of the elements in the result section 
   img.src = item.image_url;
   name.innerHTML = item.name;
   address.innerHTML = item.location.display_address[0] + '</br>' + item.location.display_address[1];
   phone.innerHTML = item.display_phone;
   website.href = item.url;
+  map.href = 'https://maps.google.com/?q=' + item.location.display_address[0] + ' ' + item.location.display_address[1];
 // so far the recommendation is invisible, this code displays it after the elements are populated
   img.parentElement.style.display = 'block';
 }
